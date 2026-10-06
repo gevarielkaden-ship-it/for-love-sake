@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>For What It's Worth</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet"/>
+</head>
+
+<body id="app-body">
+
+    <!-- Background Decorations -->
+<div class="bg-decorations" aria-hidden="true">
+    <!-- Hati kiri atas -->
+    <svg class="bg-doodle doodle-heart" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21s-8-5.5-8-11.5C4 6 7 4 9.5 4c1.5 0 2.5.8 2.5.8s1-.8 2.5-.8C17 4 20 6 20 9.5 20 15.5 12 21 12 21z"/>
+    </svg>
+    
+    <!-- Bintang atas kanan -->
+    <svg class="bg-doodle doodle-star" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
+    </svg>
+    
+    <!-- Sparkle kiri tengah -->
+    <svg class="bg-doodle doodle-sparkle" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2v8m0 4v8m-6-10h8m4 0h-8m-5.66-5.66l5.66 5.66m4 4l5.66 5.66m0-15.32l-5.66 5.66m-4 4l-5.66 5.66" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </svg>
+    
+    <!-- Hati kecil kanan tengah -->
+    <svg class="bg-doodle doodle-heart-sm" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21s-8-5.5-8-11.5C4 6 7 4 9.5 4c1.5 0 2.5.8 2.5.8s1-.8 2.5-.8C17 4 20 6 20 9.5 20 15.5 12 21 12 21z"/>
+    </svg>
+    
+    <!-- Bintang bawah kiri -->
+    <svg class="bg-doodle doodle-star-sm" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
+    </svg>
+    
+    <!-- Hati besar bawah kanan -->
+    <svg class="bg-doodle doodle-heart-lg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21s-8-5.5-8-11.5C4 6 7 4 9.5 4c1.5 0 2.5.8 2.5.8s1-.8 2.5-.8C17 4 20 6 20 9.5 20 15.5 12 21 12 21z"/>
+    </svg>
+    
+    <!-- Doodle squiggle -->
+    <svg class="bg-doodle doodle-squiggle" viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M5 25c10-15 20 5 30-10s20 5 30-10"/>
+    </svg>
+</div>
+
+<!-- ========================================== -->
+<!-- STAGE 1: THE PASSWORD GATE                 -->
+<!-- ========================================== -->
+<div id="password-stage">
+    <div class="glass-card p-10 md:p-12 rounded-3xl text-center w-11/12 max-w-md">
+        <div class="flex justify-center mb-6">
+            <div id="lock-icon"
+                 class="w-16 h-16 rounded-full flex items-center justify-center
+                        bg-white/20 backdrop-blur-sm
+                        border border-white/30
+                        shadow-lg">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-8 h-8 text-[#F8E7D0]"
+                     fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="1.5">
+
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.5 10.5V6.75a4.5 4.5 0 0 0-9 0v3.75
+                             m-1.5 0h12a1.5 1.5 0 0 1 1.5 1.5v7.5
+                             a1.5 1.5 0 0 1-1.5 1.5h-12
+                             a1.5 1.5 0 0 1-1.5-1.5V12
+                             a1.5 1.5 0 0 1 1.5-1.5Z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 15v2"/>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="text-4xl md:text-4xl font-romantic text-[#F8E7D0] mb-3">
+            My Dearest, Khalfan
+        </h1>
+
+        <p class="text-[#FFF8F0]/75 text-sm md:text-base leading-relaxed mb-8">
+            There's nothing you need to figure out here.
+            Just take your time, look around, and let me show you something.
+        </p>
+
+        <button id="enter-btn" type="button"
+                class="w-full bg-[#6B1E2D] hover:bg-[#812D3D]
+                       text-[#FFF8F0] font-medium
+                       py-3.5 px-6 rounded-xl shadow-lg
+                       transition-all duration-300
+                       hover:-translate-y-0.5 hover:shadow-xl">
+            Press here to go in.
+        </button>
+    </div>
+</div>
+
+<!-- ========================================== -->
+<!-- STAGE 2 & 3 & 4: THE MAIN CONTENT          -->
+<!-- ========================================== -->
+<div id="main-stage">
+
+    <!-- NAVBAR (fixed, scroll-spy) -->
+    <nav id="main-navbar" class="fixed top-0 left-0 w-full z-40 bg-[#101F3D]/75 backdrop-blur-lg border-b border-white/10 shadow-sm">
+        <div class="navbar-inner">
+            <ul class="navbar-links">
+                <li><a class="page-link" href="#music">Home</a></li>
+                <li><a class="page-link" href="#story">Story</a></li>
+                <li><a class="page-link" href="#gallery">Gallery</a></li>
+                <li><a class="page-link" href="#reasons">Reasons</a></li>
+                <li><a class="page-link" href="#bucket-list">Bucket List</a></li>
+                <li><a class="page-link" href="#secret">Dear You</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="page-container">
+
+        <!-- ============ MUSIC / HOME ============ -->
+        <section class="page-section" id="music">
+            <div class="max-w-2xl mx-auto px-4 w-full text-center" id="music-content">
+                <h1 class="text-3xl md:text-4xl font-romantic text-pink-950 mb-4">
+                    A Song That Reminds Me of You
+                </h1>
+                <div class="section-divider"></div>
+                <p class="text-sm md:text-base text-[#FFF8F0]/75 max-w-md mx-auto mb-7 leading-relaxed">
+                    Reminds me of us, and of all the little moments we share.
+                </p>
+
+                <iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        allowfullscreen=""
+                        class="mb-6 shadow-xl border-0"
+                        frameborder="0" height="152" loading="lazy"
+                        src="https://open.spotify.com/embed/track/72sfmdpuO5r8cBDgs7MqZZ?utm_source=generator&theme=0&si=21de86ae349c44b8"
+                        style="border-radius:12px"
+                        width="100%"></iframe>
+
+                <a class="inline-flex items-center justify-center gap-2
+                          bg-[#6B1E2D] hover:bg-[#812D3D]
+                          text-white font-medium
+                          py-3 px-6 rounded-full shadow-lg
+                          transition-transform hover:-translate-y-1"
+                   href="https://open.spotify.com/playlist/5ns6aDyHduALgWp2MX0aI5?si=qtdxJQgGTli_dGbXr1R9Ow&utm_source=native-share-menu&pi=gY0_Mh8kRXmav"
+                   rel="noopener noreferrer" target="_blank">
+
+                    <svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.6 12.84c.361.181.54.78.361 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.54.3.72.96.42 1.5-.3.54-.96.72-1.5.36z"/>
+                    </svg>
+                    A playlist for you.
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ STORY ============ -->
+        <section class="page-section" id="story">
+            <header class="pb-10 text-center px-4">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-romantic text-pink-950 mb-4">
+                    Our Story So Far
+                </h1>
+                <div class="section-divider"></div>
+                <p class="text-base md:text-lg text-pink-800/80 font-medium">
+                    Scroll down to take a walk down memory lane...
+                </p>
+            </header>
+
+            <div class="relative max-w-4xl mx-auto px-4 py-10 w-full">
+                <div class="timeline-line"></div>
+
+                <!-- Memory 1 -->
+                <div class="relative flex flex-col md:flex-row items-center mb-24 w-full">
+                    <div class="md:w-1/2 md:pr-12 w-full pl-12 md:pl-0 text-left md:text-right">
+                        <h2 class="text-xl md:text-2xl font-romantic text-indigo-900 mb-2">Somewhere Along the Way</h2>
+                        <p class="text-indigo-800/80 mb-4 leading-relaxed text-sm md:text-base">
+                            The moment I stopped seeing you as just friend, and somehow realized I was already falling for you.
+                            I didn't even plan on sayin it that right, but I guess you deserved to know.
+                        </p>
+                        <span class="inline-block bg-white/50 text-indigo-600 text-xs md:text-sm px-4 py-1 rounded-full font-medium">
+                            September 8th
+                        </span>
+                    </div>
+
+                    <div class="absolute left-6 md:left-1/2 w-6 h-6 bg-pink-400 rounded-full border-4 border-white shadow-md transform md:-translate-x-1/2 mt-4 md:mt-0 z-10"></div>
+
+                    <div class="md:w-1/2 md:pl-12 w-full pl-12 md:pl-0 mt-6 md:mt-0">
+                        <img alt="Coffee shop"
+                             class="w-full max-w-xs rounded-2xl shadow-xl border-4 border-white transform md:rotate-3"
+                             src="assets/photo_2026-10-06_13-45-44.jpg"/>
+                    </div>
+                </div>
+
+                <!-- Memory 2 -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center mb-24 w-full">
+                    <div class="md:w-1/2 md:pl-12 w-full pl-12 md:pl-0 text-left">
+                        <h2 class="text-xl md:text-2xl font-romantic text-indigo-900 mb-2">It's Just the Beginning</h2>
+                        <p class="text-indigo-800/80 mb-4 leading-relaxed text-sm md:text-base">
+                            Apparently, this was only the beginning. We had no idea how many moments, random videos, pictures, 
+                            and laughs would come after this one.
+                        </p>
+                        <span class="inline-block bg-white/50 text-indigo-600 text-xs md:text-sm px-4 py-1 rounded-full font-medium">
+                            Our First Vidcu
+                        </span>
+                    </div>
+
+                    <div class="absolute left-6 md:left-1/2 w-6 h-6 bg-indigo-400 rounded-full border-4 border-white shadow-md transform md:-translate-x-1/2 mt-4 md:mt-0 z-10"></div>
+
+                    <div class="md:w-1/2 md:pr-12 w-full pl-12 md:pl-0 mt-6 md:mt-0 flex md:justify-end">
+                        <video class="w-full max-w-xs rounded-2xl shadow-xl border-4 border-white transform md:-rotate-2" autoplay loop muted playsinline webkit-playsinline preload="metadata">
+                            <source src="assets/video_2026-10-06_14-37-24.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Memory 3 (Left on desktop, sama seperti Memory 1) -->
+<div class="relative flex flex-col md:flex-row items-center mb-24 w-full">
+    <div class="md:w-1/2 md:pr-12 w-full pl-12 md:pl-0 text-left md:text-right">
+        <h2 class="text-xl md:text-2xl font-romantic text-indigo-900 mb-2">You Feel Like Home</h2>
+        <p class="text-indigo-800/80 mb-4 leading-relaxed text-sm md:text-base">
+            Maybe that's what I love most about you.
+            I never have to try too hard to feel at home with you.
+        </p>
+        <span class="inline-block bg-white/50 text-indigo-600 text-xs md:text-sm px-4 py-1 rounded-full font-medium">
+            Where I Belong
+        </span>
+    </div>
+
+    <!-- Timeline Dot -->
+    <div class="absolute left-6 md:left-1/2 w-6 h-6 bg-pink-400 rounded-full border-4 border-white shadow-md transform md:-translate-x-1/2 mt-4 md:mt-0 z-10"></div>
+
+    <!-- Image -->
+    <div class="md:w-1/2 md:pl-12 w-full pl-12 md:pl-0 mt-6 md:mt-0">
+        <img alt="Late night" 
+             class="w-full max-w-xs rounded-2xl shadow-xl border-4 border-white transform md:rotate-3" 
+             src="assets/photo_2026-10-06_15-12-12.jpg"/>
+    </div>
+</div>
+            </div>
+        </section>
+
+            <div class="section-separator"></div>
+
+                <!-- ============ GALLERY ============ -->
+        <section class="page-section" id="gallery">
+            <div class="gallery-wrapper">
+                <h2 class="text-2xl md:text-5xl lg:text-6xl font-romantic text-pink-950 mb-12">
+                    Pieces of Us
+                </h2>
+                <div class="section-divider"></div>
+
+                <div class="gallery-stage">
+                    <button id="prev-btn" class="gallery-arrow gallery-arrow-prev" aria-label="Previous">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="polaroid-stack" id="polaroid-stack">
+                        <div class="polaroid-item">
+                            <div class="polaroid-photo">
+                            <img alt="Memory 1" class="w-full flex-shrink-0 object-cover aspect-[4/5]"
+                                 src="assets/53161.jpeg"/>
+                                <p class="polaroid-caption">my favorite kinda chaos</p>
+                            </div>
+                        </div>
+
+                        <div class="polaroid-item">
+                            <div class="polaroid-photo">
+                            <img alt="Memory 2" class="w-full flex-shrink-0 object-cover aspect-[4/5]"
+                                 src="assets/IMG_20261005_121825_419.jpg"/>
+                                <p class="polaroid-caption">you make ordinary days beautiful</p>
+                            </div>
+                        </div>
+
+                        <div class="polaroid-item">
+                            <div class="polaroid-photo">
+                            <img alt="Memory 3" class="w-full flex-shrink-0 object-cover aspect-[4/5]"
+                                 src="assets/photo_2026-10-02_17-44-14.jpg"/>
+                                <p class="polaroid-caption">this one feels like home</p>
+                            </div>
+                        </div>
+
+                        <div class="polaroid-item">
+                            <div class="polaroid-photo">
+                            <img alt="Memory 4" class="w-full flex-shrink-0 object-cover aspect-[4/5]"
+                                 src="assets/photo_2026-10-04_20-12-41.jpg"/>
+                                <p class="polaroid-caption">a little moment with you</p>
+                            </div>
+                        </div>
+
+                        <div class="polaroid-item">
+                            <div class="polaroid-photo">
+                            <img alt="Memory 5" class="w-full flex-shrink-0 object-cover aspect-[4/5]"
+                                 src="assets/Tak berjudul580_Dipulihkan_20260925154242.png"/>
+                                <p class="polaroid-caption">somehow we just fit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <button id="next-btn"
+                                class="gallery-arrow gallery-arrow-next" aria-label="Next">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+                            </svg>
+                        </button>
+                </div>
+
+                        <div class="gallery-dots" id="gallery-dots">
+                            <div class="gallery-dot active"></div>
+                            <div class="gallery-dot"></div>
+                            <div class="gallery-dot"></div>
+                            <div class="gallery-dot"></div>
+                            <div class="gallery-dot"></div>
+                        </div>
+                    </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- ============ REASONS WHY I LOVE YOU ============ -->
+        <section class="page-section" id="reasons">
+    <div class="max-w-2xl mx-auto px-4 w-full">
+        <h2 class="text-3xl md:text-4xl font-romantic text-center mb-12">Reasons Why I Love You</h2>
+        <div class="section-divider"></div>
+        
+        <div class="reasons-container">
+            <!-- Reason 1 -->
+            <div class="reason-card">
+                <div class="reason-header">
+                    <span class="reason-num">01</span>
+                    <h3 class="reason-title">Your jokes and silly humor that never fail.</h3>
+                </div>
+                <p class="reason-desc">Honestly, none of your jokes ever fail to make me laugh out loud.</p>
+            </div>
+
+            <!-- Reason 2 -->
+            <div class="reason-card">
+                <div class="reason-header">
+                    <span class="reason-num">02</span>
+                    <h3 class="reason-title">The little things you do for me.</h3>
+                </div>
+                <p class="reason-desc">Every sweet text, random check-in, and little thought you send my way never fails to brighten my day.</p>
+            </div>
+
+            <!-- Reason 3 -->
+            <div class="reason-card">
+                <div class="reason-header">
+                    <span class="reason-num">03</span>
+                    <h3 class="reason-title">How easy it is to talk to you.</h3>
+                </div>
+                <p class="reason-desc">With you, I can completely be myself without any fear of being judged.</p>
+            </div>
+
+            <!-- Reason 4 -->
+            <div class="reason-card">
+                <div class="reason-header">
+                    <span class="reason-num">04</span>
+                    <h3 class="reason-title">Your cute little quirks.</h3>
+                </div>
+                <p class="reason-desc">All those endearing little habits of yours, even when you're being completely clueless.</p>
+            </div>
+
+            <!-- Reason 5 -->
+            <div class="reason-card">
+                <div class="reason-header">
+                    <span class="reason-num">05</span>
+                    <h3 class="reason-title">You make every ordinary moment special.</h3>
+                </div>
+                <p class="reason-desc">The most simple everyday things always feel so much more exciting when I'm with you.</p>
+            </div>
+
+            <!-- Reason 6 -->
+            <div class="reason-card">
+                <div class="reason-header">
+                    <span class="reason-num">06</span>
+                    <h3 class="reason-title">Simply because you are you.</h3>
+                </div>
+                <p class="reason-desc">Without even trying to be anyone else, you are already more than enough for me.</p>
+            </div>
+        </div>
+        
+        <!-- Closing Statement -->
+        <div class="reasons-closing">
+            <p>And a thousand more reasons I couldn't possibly write down here. 🤍</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-separator"></div>
+        
+        <!-- ============ REASONS WHY WE SHOULD DATE ============ -->
+<section class="page-section" id="why-date">
+    <div class="max-w-4xl mx-auto px-4 w-full">
+        <h2 class="text-3xl md:text-4xl font-romantic text-center mb-2">Reasons Why We Should Date</h2>
+        <div class="section-divider"></div>
+        <p class="text-center text-[#FFF8F0]/70 mb-10 font-handwriting">The practical benefits of being with me.</p>
+
+        <!-- Grid Coupon / Tiket -->
+        <div class="coupon-grid">
+            <div class="coupon-card">
+                <span class="coupon-emoji">01</span>
+                <p>You get free access to my endless supply of dad jokes</p>
+            </div>
+            <div class="coupon-card">
+                <span class="coupon-emoji">02</span>
+                <p>You’ll get an unlimited pass to my daily life and random updates</p>
+            </div>
+            <div class="coupon-card">
+                <span class="coupon-emoji">03</span>
+                <p>We’re already basically dating anyway, we just need to make it official 😂❤️</p>
+            </div>
+            <div class="coupon-card">
+                <span class="coupon-emoji">04</span>
+                <p>Your screen time will finally be put to good use</p>
+            </div>
+            <div class="coupon-card">
+                <span class="coupon-emoji">05</span>
+                <p>You’ll get a 24/7 personal hypeman for literally everything you do</p>
+            </div>
+            <div class="coupon-card">
+                <span class="coupon-emoji">06</span>
+                <p>We love each other anyway, so why not make it official?</p>
+            </div>
+        </div>
+
+        <!-- Video Landscape -->
+        <div class="video-frame">
+        <div class="video-container">
+            <video id="couple-video" autoplay muted loop playsinline webkit-playsinline preload="metadata">
+                <source src="assets/video_2026-10-06_05-04-44.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="video-overlay"></div>
+
+            <div class="video-controls" id="video-controls">
+                <div class="video-progress" id="video-progress">
+                    <div class="video-progress-filled" id="video-progress-filled"></div>
+                </div>
+
+                <div class="video-buttons">
+                    <button class="video-btn" id="btn-skip-back" aria-label="Skip back 10 seconds">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="11 19 2 12 11 5"></polyline>
+                            <line x1="22" y1="19" x2="22" y2="5"></line>
+                        </svg>
+                    </button>
+
+                    <button class="video-btn video-btn-main" id="btn-play-pause" aria-label="Play/Pause">
+                        <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>
+                        <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <rect x="6" y="4" height="16"></rect>
+                            <rect x="14" y="4" height="16"></rect>
+                        </svg>
+                    </button>
+
+                    <button class="video-btn" id="btn-skip-forward" aria-label="Skip forward 10 seconds">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="13 19 22 12 13 5"></polyline>
+                        <line x1="2" y1="19" x2="2" y2="5"></line>
+                    </svg>
+                    </button>
+
+                    <span class="video-time" id="video-time">0:00 / 0:00</span>
+                    <div class="video-spacer"></div>
+
+                    <button class="video-btn" id="btn-mute" aria-label="Mute/Unmute">
+                    <svg id="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                    <svg id="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="section-separator"></div>
+        
+        <!-- ============ THINGS I WANNA DO WITH YOU (STICKY NOTES) ============ -->
+<section class="page-section" id="bucket-list">
+    <div class="bucket-wrapper">
+        <h2 class="text-3xl md:text-4xl font-romantic text-center mb-2">Things I Wanna Do With You</h2>
+        <div class="section-divider"></div>
+        <p class="text-center text-[#FFF8F0]/70 mb-12 font-handwriting">A little wishlist of us...</p>
+
+        <div class="sticky-grid">
+            <button class="sticky-note sticky-yellow" style="--rot: -2deg;">
+                <p>Have matching pfps and pretend we're not obsessed with each other.</p>
+            </button>
+
+            <button class="sticky-note sticky-pink" style="--rot: 1.5deg;">
+                <p>Make a playlist that slowly becomes 90% songs about us.</p>
+            </button>
+
+            <button class="sticky-note sticky-blue" style="--rot: -1deg;">
+                <p>Send you random pictures throughout the day just because I thought of you.</p>
+            </button>
+
+            <button class="sticky-note sticky-cream" style="--rot: 2deg;">
+                <p>Have our own stupid inside jokes that nobody else understands.</p>
+            </button>
+
+            <button class="sticky-note sticky-mint" style="--rot: -1.5deg;">
+                <p>Make a little collection of our favorite conversations and moments.</p>
+            </button>
+
+            <button class="sticky-note sticky-peach" style="--rot: 1deg;">
+                <p>Celebrate random little milestones that probably only make sense to us.</p>
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay Fullscreen Sticky Note -->
+    <div class="sticky-overlay" id="sticky-overlay">
+        <div class="sticky-expanded" id="sticky-expanded">
+            <p id="sticky-expanded-text"></p>
+            <span class="sticky-hint">Tap anywhere to close</span>
+        </div>
+    </div>
+</section>
+
+<div class="section-separator"></div>
+
+<!-- ============ AND MAYBE, SOMEDAY (BOOK) ============ -->
+<section class="page-section" id="someday">
+    <div class="someday-wrapper">
+
+        <!-- Buku -->
+        <div class="book" id="book">
+            <!-- Konten halaman (yang muncul saat buku dibuka) -->
+            <div class="book-open-content">
+                <!-- Halaman Kiri -->
+                <div class="book-page page-left">
+                    <ul class="someday-list">
+                        <li>Maybe we'll still be this close, even when the excitement of something new has faded.</li>
+                        <li>Maybe we'll know each other well enough to understand the things left unsaid.</li>
+                        <li>Maybe we'll have our own little habits that somehow become part of us.</li>
+                    </ul>
+                </div>
+
+                <!-- Halaman Kanan -->
+                <div class="book-page page-right">
+                    <ul class="someday-list">
+                        <li>Maybe we'll look back at where we started and laugh at how unexpected all of this was.</li>
+                        <li>Maybe we'll keep finding reasons to choose each other.</li>
+                        <li>Maybe someday, this will feel like something we were always meant to find.</li>
+                    </ul>
+                </div>
+            </div>
+
+<!-- Sampul buku (tertutup) -->
+<div class="book-closed-cover" id="book-cover">
+    <div class="book-cover-inner">
+        <span class="book-cover-title">Someday</span>
+        
+        <!-- Ornamen pemisah -->
+        <div class="book-cover-divider">
+            <span class="book-cover-diamond"></span>
+        </div>
+        
+        <span class="book-cover-hint">tap to open</span>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<div class="section-separator"></div>
+
+        <!-- ============ SECRET ============ -->
+        <section class="page-section" id="secret">
+            <div class="text-center pb-8">
+                <h2 class="text-3xl font-romantic text-pink-900 mb-2">
+                    There's one more thing...
+                </h2>
+                <div class="section-divider"></div>
+                <p class="text-pink-700/80">
+                    Tap the envelope to open it
+                </p>
+            </div>
+
+            <div class="envelope-wrapper mt-4" id="envelope-container">
+                <div class="envelope-body">
+                    <div class="flap"></div>
+                    <div class="pocket"></div>
+                    <div class="wax-seal text-2xl">K</div>
+
+                    <!-- The Letter Itself -->
+                    <div class="letter shadow-inner flex flex-col justify-between">
+                        <div class="letter shadow-inner">
+    <!-- Halaman-halaman Surat -->
+    <div class="letter-pages" id="letter-pages">
+        
+        <!-- Halaman 1: Pembuka -->
+        <div class="letter-page active">
+            <h3 class="letter-greeting font-romantic">Dear Khalfan,</h3>
+            <p class="letter-text font-handwriting">
+                At first, I never thought I would fall for you. In my eyes, you were just a cute, good friend — the one who always had something to say to me, even when other people thought I was cold hearted.
+            </p>
+        </div>
+
+        <!-- Halaman 2 -->
+        <div class="letter-page">
+            <p class="letter-text font-handwriting">
+                If you ask me when this feeling started to grow, the only answer I can give is that love grew as I felt more and more comfortable around you. I don't know the exact moment, but slowly I realized I was waiting for your texts, waiting for your replies, and looking out for every update about you, even when it wasn't in our personal chat.
+            </p>
+        </div>
+
+        <!-- Halaman 3 -->
+        <div class="letter-page">
+            <p class="letter-text font-handwriting">
+                As time passed, I realized it's because you are the only person who truly understands me. You understand how I act, and you never saw me as hard to get or nonchalant. You managed to reach a side of me I didn't even realize I still had.
+            </p>
+        </div>
+
+        <!-- Halaman 4 -->
+        <div class="letter-page">
+            <p class="letter-text font-handwriting">
+                You made me feel what love feels like again. You brighten my days so easily with just a simple text. You cheer me up when I'm at my lowest, and I'm genuinely grateful for that.
+            </p>
+        </div>
+
+        <!-- Halaman 5 -->
+        <div class="letter-page">
+            <p class="letter-text font-handwriting">
+                I know I've made mistakes and caused you sadness, anger, and tears — yet you still forgive me and give us a chance to grow better together.
+            </p>
+        </div>
+
+        <!-- Halaman 6 -->
+        <div class="letter-page letter-page-final">
+            <p class="letter-text font-handwriting mb-8">
+                I'm so sorry it took me this long to take this step. I've made you wait so much longer than you ever deserved, and I hate myself for keeping you waiting. I can't bear the thought of wasting another second without you by my side.
+            </p>
+            <p class="font-romantic text-2xl md:text-xl text-right text-[#6B1E2D]">
+                                With love,
+            </p>
+            <p class="font-sign text-2xl md:text-2xl text-right text-[#293650]">
+                                Arthur J.
+            </p>
+        </div>
+    </div>
+
+    <!-- Progress Dots -->
+    <div class="letter-progress" id="letter-progress"></div>
+
+    <!-- Hint Tap (kiri: back, kanan: next) -->
+    <div class="letter-hint" id="letter-hint">
+        <span class="hint-back">← back</span>
+        <span class="hint-next">tap to continue →</span>
+    </div>
+
+    <!-- Tombol Fold (muncul di halaman terakhir) -->
+    <div class="letter-footer">
+        <button id="btn-fold" class="btn-fold" style="display:none;">
+            Fold &amp; Close
+        </button>
+    </div>
+</div>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer id="main-footer">
+            <div class="footer-content">
+                
+                <!-- Garis pemisah kecil -->
+                <div class="footer-divider"></div>
+        
+                <!-- Pesan penutup -->
+                <p class="footer-message">
+                    Made with <span class="heart-icon">❤️</span> just for you.
+                </p>
+        
+                <!-- Tombol Back to Top -->
+                <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <span>Back to top</span>
+                </button>
+        
+                <!-- Copyright kecil -->
+                <p class="footer-copyright">© 2026 Our Story. All rights reserved (and all my heart).</p>
+            </div>
+        </footer>
+
+    </main>
+</div>
+
+<script>
+/* =========================================================
+   NAVIGATION : SMOOTH SCROLL + SCROLL SPY
+   ========================================================= */
+const pageSections = document.querySelectorAll('.page-section');
+const pageLinks    = document.querySelectorAll('.page-link');
+
+const sectionToNavMap = {
+    'music': '#music',
+    'story':        '#story',
+    'reasons':      '#reasons',
+    'why-date':     '#reasons',
+    'bucket-list':  '#bucket-list',
+    'someday':      '#bucket-list',
+    'gallery':      '#gallery',
+    'secret':       '#secret',
+}
+
+
+function setActiveLink(sectionId) {
+    const targetHash = sectionToNavMap[sectionId] || `#${sectionId}`;
+
+    pageLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === targetHash);
+    });
+}
+
+/* --- Smooth scroll on click --- */
+pageLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+
+        const hash   = link.getAttribute('href');
+        const target = document.querySelector(hash);
+        if (!target) return;
+
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', hash);
+        setActiveLink(hash.replace('#', '')); // instant feedback
+    });
+});
+
+/* --- Scroll spy (middle-of-screen band) --- */
+const spyObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+        }
+    });
+}, {
+    root: null,
+    rootMargin: '-50% 0px -55% 0px',
+    threshold: 0
+});
+
+pageSections.forEach(section => spyObserver.observe(section));
+
+/* Initial state */
+setActiveLink((window.location.hash || '#music').replace('#', ''));
+</script>
+
+<script>
+/* =========================================================
+   STAGE 1 : PASSWORD / ENTER
+   ========================================================= */
+const appBody = document.getElementById('app-body');
+const enterBtn = document.getElementById('enter-btn');
+
+enterBtn.addEventListener('click', () => {
+    appBody.classList.add('unlocked');
+
+    const hash = window.location.hash;
+
+    setTimeout(() => {
+        if (hash && document.querySelector(hash)) {
+            document.querySelector(hash).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+    }, 500);
+});
+
+/* =========================================================
+   SECRET : ENVELOPE OPEN & FOLD
+   ========================================================= */
+const envelopeContainer = document.getElementById('envelope-container');
+const btnFold = document.getElementById('btn-fold');
+let isEnvelopeOpen = false;
+
+// Fungsi untuk membuka amplop
+envelopeContainer.addEventListener('click', (e) => {
+    // Mencegah klik pada tombol fold memicu event klik amplop lagi
+    if (e.target.closest('#btn-fold')) return; 
+    
+    if (!isEnvelopeOpen) {
+        envelopeContainer.classList.add('open');
+        isEnvelopeOpen = true;
+        
+        // Trigger efek hati saat surat terbuka
+        triggerHearts();
+    }
+});
+
+// Fungsi untuk melipat surat kembali
+if (btnFold) {
+    btnFold.addEventListener('click', (e) => {
+        e.stopPropagation(); // Mencegah event bubbling ke envelopeContainer
+        envelopeContainer.classList.remove('open');
+        isEnvelopeOpen = false;
+    });
+}
+
+/* =========================================================
+   GALLERY : POLAROID STACK (5 FOTOS)
+   ========================================================= */
+const polaroidStack = document.getElementById('polaroid-stack');
+const polaroidItems = document.querySelectorAll('.polaroid-item');
+const prevBtn       = document.getElementById('prev-btn');
+const nextBtn       = document.getElementById('next-btn');
+const galleryDots   = document.querySelectorAll('.gallery-dot');
+const totalSlides   = polaroidItems.length; // otomatis = 5
+let currentIndex    = 0;
+
+function updatePolaroidPositions() {
+    polaroidItems.forEach((item, i) => {
+        // Hitung offset dari index aktif (0 = depan, 4 = belakang)
+        const offset = (i - currentIndex + totalSlides) % totalSlides;
+
+        // Reset semua class posisi
+        item.classList.remove('pos-0', 'pos-1', 'pos-2', 'pos-3', 'pos-4');
+
+        // Terapkan class sesuai offset
+        item.classList.add(`pos-${offset}`);
+    });
+
+    // Update dots
+    galleryDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updatePolaroidPositions();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updatePolaroidPositions();
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+/* --- Swipe Support (Mobile) --- */
+let polaroidTouchStartX = 0;
+
+polaroidStack.addEventListener('touchstart', e => {
+    polaroidTouchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+polaroidStack.addEventListener('touchend', e => {
+    const diff = polaroidTouchStartX - e.changedTouches[0].screenX;
+    const threshold = 50;
+
+    if (diff > threshold)       nextSlide();
+    else if (diff < -threshold) prevSlide();
+}, { passive: true });
+
+/* --- Klik Polaroid untuk Next --- */
+polaroidItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Hanya polaroid paling depan yang berpindah saat diklik
+        if (item.classList.contains('pos-0')) nextSlide();
+    });
+});
+
+/* --- Inisialisasi --- */
+updatePolaroidPositions();
+
+/* =========================================================
+   FOOTER : BACK TO TOP
+   ========================================================= */
+const backToTopBtn = document.getElementById('back-to-top');
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+/* =========================================================
+   CUSTOM VIDEO PLAYER
+   ========================================================= */
+const video         = document.getElementById('couple-video');
+const videoContainer = video?.closest('.video-container');
+const btnPlayPause  = document.getElementById('btn-play-pause');
+const btnMute       = document.getElementById('btn-mute');
+const btnSkipBack   = document.getElementById('btn-skip-back');
+const btnSkipFwd    = document.getElementById('btn-skip-forward');
+const iconPlay      = document.getElementById('icon-play');
+const iconPause     = document.getElementById('icon-pause');
+const iconMuted     = document.getElementById('icon-muted');
+const iconUnmuted   = document.getElementById('icon-unmuted');
+const progressBar   = document.getElementById('video-progress');
+const progressFill  = document.getElementById('video-progress-filled');
+const timeDisplay   = document.getElementById('video-time');
+
+if (video) {
+    /* --- Format waktu mm:ss --- */
+    function formatTime(sec) {
+        if (isNaN(sec)) return '0:00';
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60).toString().padStart(2, '0');
+        return `${m}:${s}`;
+    }
+
+    /* --- Play / Pause --- */
+    btnPlayPause.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+
+    video.addEventListener('play', () => {
+        iconPlay.style.display  = 'none';
+        iconPause.style.display = 'block';
+    });
+
+    video.addEventListener('pause', () => {
+        iconPlay.style.display  = 'block';
+        iconPause.style.display = 'none';
+    });
+
+    /* --- Mute / Unmute --- */
+    btnMute.addEventListener('click', () => {
+        video.muted = !video.muted;
+        updateMuteIcon();
+    });
+
+    function updateMuteIcon() {
+        if (video.muted) {
+            iconMuted.style.display   = 'block';
+            iconUnmuted.style.display = 'none';
+        } else {
+            iconMuted.style.display   = 'none';
+            iconUnmuted.style.display = 'block';
+        }
+    }
+    updateMuteIcon();
+
+    /* --- Skip ±10 detik --- */
+    btnSkipBack.addEventListener('click', () => {
+        video.currentTime = Math.max(0, video.currentTime - 10);
+    });
+
+    btnSkipFwd.addEventListener('click', () => {
+        video.currentTime = Math.min(video.duration || 0, video.currentTime + 10);
+    });
+
+    /* --- Progress Bar Update --- */
+    video.addEventListener('timeupdate', () => {
+        if (video.duration) {
+            const pct = (video.currentTime / video.duration) * 100;
+            progressFill.style.width = `${pct}%`;
+            timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        }
+    });
+
+    /* --- Klik Progress Bar untuk Seek --- */
+    progressBar.addEventListener('click', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const pct  = (e.clientX - rect.left) / rect.width;
+        if (video.duration) {
+            video.currentTime = pct * video.duration;
+        }
+    });
+
+    /* --- Drag Progress Bar --- */
+    let isDragging = false;
+
+    progressBar.addEventListener('mousedown', () => { isDragging = true; });
+    document.addEventListener('mouseup', () => { isDragging = false; });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const rect = progressBar.getBoundingClientRect();
+        const pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        if (video.duration) {
+            video.currentTime = pct * video.duration;
+        }
+    });
+
+    /* --- Touch Support untuk Seek --- */
+    progressBar.addEventListener('touchstart', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const pct  = (e.touches[0].clientX - rect.left) / rect.width;
+        if (video.duration) video.currentTime = pct * video.duration;
+    }, { passive: true });
+
+    /* --- Auto Hide Controls saat Idle --- */
+    let hideTimeout;
+    function showControls() {
+        videoContainer.classList.remove('hide-controls');
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+            if (!video.paused) {
+                videoContainer.classList.add('hide-controls');
+            }
+        }, 2500);
+    }
+
+    videoContainer.addEventListener('mousemove', showControls);
+    videoContainer.addEventListener('touchstart', showControls);
+    videoContainer.addEventListener('mouseleave', () => {
+        if (!video.paused) videoContainer.classList.add('hide-controls');
+    });
+
+    // Tampilkan controls saat video di-pause
+    video.addEventListener('pause', () => {
+        videoContainer.classList.remove('hide-controls');
+        clearTimeout(hideTimeout);
+    });
+
+    // Sembunyikan awal saat autoplay
+    hideTimeout = setTimeout(() => {
+        if (!video.paused) videoContainer.classList.add('hide-controls');
+    }, 2500);
+}
+
+/* =========================================================
+   STICKY NOTES : EXPAND ON CLICK
+   ========================================================= */
+const stickyNotes     = document.querySelectorAll('.sticky-note');
+const stickyOverlay   = document.getElementById('sticky-overlay');
+const stickyExpanded  = document.getElementById('sticky-expanded');
+const stickyText      = document.getElementById('sticky-expanded-text');
+
+if (stickyOverlay) {
+    stickyNotes.forEach(note => {
+        note.addEventListener('click', () => {
+            // Ambil teks dari sticky note
+            const text = note.querySelector('p').innerText;
+            stickyText.textContent = text;
+
+            // Ambil warna background dari note, terapkan ke expanded
+            const bgColor = window.getComputedStyle(note).backgroundColor;
+            stickyExpanded.style.background = bgColor;
+
+            // Tampilkan overlay
+            stickyOverlay.classList.add('show');
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Tap anywhere to close
+    stickyOverlay.addEventListener('click', () => {
+        stickyOverlay.classList.remove('show');
+        document.body.style.overflow = '';
+    });
+
+    // ESC key to close (bonus untuk desktop)
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && stickyOverlay.classList.contains('show')) {
+            stickyOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+/* =========================================================
+   SOMEDAY : BOOK OPEN / CLOSE
+   ========================================================= */
+const book = document.getElementById('book');
+
+if (book) {
+    book.addEventListener('click', () => {
+        book.classList.toggle('open');
+
+        // Setelah buku dibuka, scroll sedikit ke tengah buku
+        if (book.classList.contains('open')) {
+            setTimeout(() => {
+                book.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 400);
+        }
+    });
+}
+
+/* --- Fix touch interaction untuk iOS --- */
+document.addEventListener('touchstart', function() {}, { passive: true });
+
+/* --- Cegah double-tap zoom pada elemen interaktif --- */
+document.querySelectorAll('.sticky-note, .gallery-arrow, .envelope-wrapper, .book, .coupon-card, .reason-card, .video-btn').forEach(el => {
+    el.addEventListener('touchstart', (e) => {
+        // Force :active state on iOS
+        el.classList.add('touch-active');
+    }, { passive: true });
+    
+    el.addEventListener('touchend', () => {
+        setTimeout(() => el.classList.remove('touch-active'), 150);
+    }, { passive: true });
+});
+
+/* =========================================================
+   LETTER : MULTI-PAGE NAVIGATION
+   ========================================================= */
+const letterElement  = document.querySelector('.letter');
+const letterPages    = document.querySelectorAll('.letter-page');
+const letterProgress = document.getElementById('letter-progress');
+const letterHint     = document.getElementById('letter-hint');
+const totalLetterPages = letterPages.length;
+let currentLetterPage = 0;
+
+/* --- Buat progress dots --- */
+if (letterProgress) {
+    letterProgress.innerHTML = '';
+    for (let i = 0; i < totalLetterPages; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'letter-dot' + (i === 0 ? ' active' : '');
+        letterProgress.appendChild(dot);
+    }
+}
+
+/* --- Fungsi navigasi halaman --- */
+function goToLetterPage(index) {
+    if (index < 0 || index >= totalLetterPages) return;
+    
+    letterPages.forEach((page, i) => {
+        page.classList.remove('active', 'prev');
+        if (i === index)         page.classList.add('active');
+        else if (i < index)      page.classList.add('prev');
+    });
+    
+    // Update dots
+    const dots = letterProgress.querySelectorAll('.letter-dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+    
+    currentLetterPage = index;
+    
+    // Halaman terakhir: tampilkan Fold button, sembunyikan hint
+    const isLast = (index === totalLetterPages - 1);
+    if (btnFold)        btnFold.style.display        = isLast ? 'inline-flex' : 'none';
+    if (letterHint)     letterHint.classList.toggle('hide', isLast);
+    
+    // Reset scroll halaman aktif
+    if (letterPages[index]) letterPages[index].scrollTop = 0;
+}
+
+function nextLetterPage() {
+    if (currentLetterPage < totalLetterPages - 1) {
+        goToLetterPage(currentLetterPage + 1);
+    }
+}
+
+function prevLetterPage() {
+    if (currentLetterPage > 0) {
+        goToLetterPage(currentLetterPage - 1);
+    }
+}
+
+function resetLetterPages() {
+    goToLetterPage(0);
+}
+
+/* --- Tap pada surat untuk navigasi --- */
+if (letterElement) {
+    letterElement.addEventListener('click', (e) => {
+        // Jangan adva nce kalau yang di-tap adalah tombol fold
+        if (e.target.closest('#btn-fold')) return;
+        
+        // Cek posisi tap: kiri 30% = prev, sisanya = next
+        const rect   = letterElement.getBoundingClientRect();
+        const tapX   = e.clientX - rect.left;
+        const ratio  = tapX / rect.width;
+        
+        if (ratio < 0.3) {
+            prevLetterPage();
+        } else {
+            nextLetterPage();
+        }
+    });
+    
+    /* --- Swipe support untuk mobile --- */
+    let letterTouchStartX = 0;
+    let letterTouchStartY = 0;
+    
+    letterElement.addEventListener('touchstart', (e) => {
+        letterTouchStartX = e.changedTouches[0].screenX;
+        letterTouchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    
+    letterElement.addEventListener('touchend', (e) => {
+        const dx = letterTouchStartX - e.changedTouches[0].screenX;
+        const dy = letterTouchStartY - e.changedTouches[0].screenY;
+        
+        // Hanya trigger kalau swipe horizontal (bukan scroll vertikal)
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx > 0) nextLetterPage();
+            else        prevLetterPage();
+        }
+    }, { passive: true });
+}
+
+/* --- Fold button: reset ke halaman 1 saat ditutup --- */
+if (btnFold) {
+    btnFold.addEventListener('click', (e) => {
+        e.stopPropagation();
+        resetLetterPages();
+    });
+}
+
+/* --- Inisialisasi --- */
+resetLetterPages();
+
+</script>
+</body>
+</html>
